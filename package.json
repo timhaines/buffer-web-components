@@ -7,6 +7,7 @@
     "start": "start-storybook -p 9002",
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "./node_modules/eslint/bin/eslint.js . --ignore-pattern coverage .storybook node_modules",
+    "percy-snapshot": "build-storybook && percy-storybook --ignore=\"node_modules(?!\/@bufferapp\/components)\"",
     "test": "npm run lint && jest --coverage",
     "test-watch": "jest --watch",
     "test-update": "jest -u"
@@ -49,6 +50,7 @@
     "@kadira/storybook": "2.35.3",
     "@kadira/storybook-addon-links": "1.0.1",
     "@kadira/storybook-deployer": "1.2.0",
+    "@percy-io/react-percy-storybook": "0.1.2",
     "babel-cli": "6.24.0",
     "babel-eslint": "7.2.1",
     "babel-jest": "19.0.0",

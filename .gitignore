@@ -5,3 +5,6 @@ node_modules
 .npm
 /coverage
 /.vscode
+
+# The static storybook build created by build-storybook
+storybook-static
