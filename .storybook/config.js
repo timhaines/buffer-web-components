@@ -1,4 +1,4 @@
-import { configure } from '@kadira/storybook';
+import { configure, getStorybook } from '@kadira/storybook';
 
 // automatically import all story.js files, excluding buffer components
 const req = require.context('../', true, /^(?!.*@bufferapp\/components).*(story\.jsx)$/);
@@ -8,3 +8,5 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+if (typeof window === 'object') window.__storybook_stories__ = getStorybook();
